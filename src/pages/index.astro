@@ -5,18 +5,22 @@ import SocialView from '../components/SocialView.astro'
 import QiitaView from '../components/QiitaView.astro'
 import ZennView from '../components/ZennView.astro'
 import ProfileView from '../components/ProfileView.astro'
+import strikeWebp from '../images/strike.webp'
+import strikePng from '../images/strike.png'
 ---
 
 <html lang="ja">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preload" href={strikeWebp} as="image" />
+    <link rel="preload" href={strikePng} as="image" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Laddgeのホームページ</title>
 	</head>
 	<body>
     <div class="flex h-screen">
-      <div class="w-1/5 overflow-auto">
+      <div class="w-[18%] overflow-auto">
         <MenuView />
       </div>
       <div class="w-1 bg-[#d0d0d0] border-x-[.5px] border-l-[#aaa] border-r-black" />

@@ -1,0 +1,16 @@
+---
+import '../main.css'
+import zenn from '../images/mh_zenn.svg'
+---
+
+<html lang="ja">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preload" href={zenn} as="image" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Zennの記事</title>
+	</head>
+  <body class="bg-repeat" style={{ backgroundImage: `url(${zenn})`, backgroundSize: '400px 110px' }}>
+  </body>
+</html>

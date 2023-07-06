@@ -1,0 +1,16 @@
+---
+import '../main.css'
+import social from '../images/mh_social.svg'
+---
+
+<html lang="ja">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preload" href={social} as="image" />
+		<meta name="generator" content={Astro.generator} />
+		<title>SNS</title>
+	</head>
+  <body class="bg-repeat" style={{ backgroundImage: `url(${social})`, backgroundSize: '400px 110px' }}>
+  </body>
+</html>

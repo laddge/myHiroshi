@@ -1,0 +1,44 @@
+---
+import '../main.css'
+import laddge from '../images/mh_laddge.svg'
+import strikeWebp from '../images/strike.webp'
+import strikePng from '../images/strike.png'
+---
+
+<html lang="ja">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preload" href={strikeWebp} as="image" />
+    <link rel="preload" href={strikePng} as="image" />
+    <link rel="preload" href={laddge} as="image" />
+		<meta name="generator" content={Astro.generator} />
+		<title>トップ</title>
+	</head>
+  <body class="bg-repeat" style={{ backgroundImage: `url(${laddge})`, backgroundSize: '400px 110px' }}>
+    <h1 class="text-center text-3xl font-bold pt-10 mb-5">Laddgeのホームページ</h1>
+    <div class="flex gap-3 w-full max-w-[850px] mx-auto">
+      <div class="flex-none">
+        <picture width="350" height="414">
+          <source srcset={strikeWebp} type="image/webp" />
+          <img src={strikePng} />
+        </picture>
+        <div class="p-4">
+          <p class="mb-1">Laddge（らっじ）</p>
+          <p class="mb-1">生年月日 2004年6月28日</p>
+          <p class="mb-1">血液型 O型</p>
+          <p class="mb-1"><a href="/profile">プロフィール</a></p>
+        </div>
+      </div>
+      <div class="grow">
+        <p class="text-center">★★★　最新情報　★★★</p>
+        <div class="mt-10 py-2 border-y border-gray-500">
+          <p class="font-bold">・トピックス</p>
+          <div class="pl-20">
+            <span class="font-bold">2023年7月6日（木） <a href="https://www.threads.net/@laddge_" target="_blank">Threads</a>始めました！</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

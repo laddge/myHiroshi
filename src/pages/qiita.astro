@@ -1,0 +1,16 @@
+---
+import '../main.css'
+import qiita from '../images/mh_qiita.svg'
+---
+
+<html lang="ja">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preload" href={qiita} as="image" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Qiitaの記事</title>
+	</head>
+  <body class="bg-repeat" style={{ backgroundImage: `url(${qiita})`, backgroundSize: '400px 110px' }}>
+  </body>
+</html>

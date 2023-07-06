@@ -1,6 +1,26 @@
 ---
 import '../main.css'
+import axios from 'axios'
+import { format } from 'date-fns'
 import qiita from '../images/mh_qiita.svg'
+
+interface Article {
+  title: string
+  url: string
+  pubDate: Date
+}
+
+const articles: Article[] = []
+const qRes = await axios.get('https://qiita.com/api/v2/items?perpage=100;query=user:laddge', {
+  headers: { Authorization: 'Bearer 072114f0c0c2cb62d76729b19dba8ce6534cc3dd' },
+})
+for (const item of qRes.data) {
+  articles.push({
+    title: item.title,
+    url: item.url,
+    pubDate: new Date(item.created_at),
+  })
+}
 ---
 
 <html lang="ja">
@@ -12,5 +32,22 @@ import qiita from '../images/mh_qiita.svg'
 		<title>Qiitaの記事</title>
 	</head>
   <body class="bg-repeat" style={{ backgroundImage: `url(${qiita})`, backgroundSize: '400px 110px' }}>
+    <h2 class="text-center text-2xl pt-10 mb-4 font-bold">Qiitaの記事</h2>
+    <table width="600" class="mx-auto font-bold table-bordered border-separate">
+      <tbody>
+        {articles.map(article => (
+          <tr>
+            <td>{format(article.pubDate, 'yyyy年M月d日')}</td>
+            <td>「<a href={article.url} target="_blank">{article.title}</a>」</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
   </body>
 </html>
+
+<style>
+  table, th, td {
+    border: 1px solid;
+  }
+</style>

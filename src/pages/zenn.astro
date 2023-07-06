@@ -1,6 +1,24 @@
 ---
 import '../main.css'
+import axios from 'axios'
+import { format } from 'date-fns'
 import zenn from '../images/mh_zenn.svg'
+
+interface Article {
+  title: string
+  url: string
+  pubDate: Date
+}
+
+const articles: Article[] = []
+const zaRes = await axios.get('https://zenn.dev/api/articles?username=laddge')
+for (const item of zaRes.data.articles) {
+  articles.push({
+    title: item.title,
+    url: `https://zenn.dev${item.path}`,
+    pubDate: new Date(item.published_at),
+  })
+}
 ---
 
 <html lang="ja">
@@ -12,5 +30,22 @@ import zenn from '../images/mh_zenn.svg'
 		<title>Zennの記事</title>
 	</head>
   <body class="bg-repeat" style={{ backgroundImage: `url(${zenn})`, backgroundSize: '400px 110px' }}>
+    <h2 class="text-center text-2xl pt-10 mb-4 font-bold">Zennの記事</h2>
+    <table width="600" class="mx-auto font-bold table-bordered border-separate">
+      <tbody>
+        {articles.map(article => (
+          <tr>
+            <td>{format(article.pubDate, 'yyyy年M月d日')}</td>
+            <td>「<a href={article.url} target="_blank">{article.title}</a>」</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
   </body>
 </html>
+
+<style>
+  table, th, td {
+    border: 1px solid;
+  }
+</style>

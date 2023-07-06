@@ -1,19 +1,42 @@
 ---
+import MenuView from '../components/MenuView.astro'
+import TopView from '../components/TopView.astro'
+import SocialView from '../components/SocialView.astro'
+import QiitaView from '../components/QiitaView.astro'
+import ZennView from '../components/ZennView.astro'
+import ProfileView from '../components/ProfileView.astro'
 ---
 
 <html lang="ja">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Laddgeのホームページ</title>
 	</head>
 	<body>
     <div class="flex h-screen">
-      <div class="w-1/5 bg-[#f0f0ff] overflow-auto" />
+      <div class="w-1/5 overflow-auto">
+        <MenuView />
+      </div>
       <div class="w-1 bg-[#d0d0d0] border-x-[.5px] border-l-[#aaa] border-r-black" />
-      <div class="grow overflow-auto" />
+      <div class="grow overflow-auto">
+        <TopView />
+        <SocialView />
+        <QiitaView />
+        <ZennView />
+        <ProfileView />
+      </div>
     </div>
 	</body>
 </html>
+
+<style is:global>
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+
+  a {
+   @apply underline text-blue-600 hover:text-blue-800 visited:text-purple-600
+  }
+</style>

@@ -1,0 +1,19 @@
+---
+interface Props {
+  tabId: string
+  bg: string
+}
+
+const { tabId, bg } = Astro.props
+---
+
+<input type="radio" name="tab" id={tabId} checked={tabId == 'top'} class="hidden" />
+<div class="hidden h-full bg-repeat" style={{ backgroundImage: `url(${bg})`, backgroundSize: '400px 110px' }}>
+  <slot />
+</div>
+
+<style>
+  input[type="radio"]:checked + div {
+    @apply block;
+  }
+</style>

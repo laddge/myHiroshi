@@ -22,4 +22,4 @@
 
 以上の工夫で、[PageSpeed Insights](https://pagespeed.web.dev/)において、高得点を出せるようになっています。
 
-![Screenshot_20230707-134857_Chrome](https://github.com/laddge/myHiroshi/assets/67098414/5173e596-4cb1-4c7a-8da9-c934e6cdf744)
+![Screenshot_20230707-141215_Trebuchet](https://github.com/laddge/myHiroshi/assets/67098414/a9431af1-f5e2-4778-86b5-e3281b61326a)

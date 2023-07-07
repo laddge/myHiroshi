@@ -33,7 +33,7 @@ for (const item of qRes.data) {
 	</head>
   <body class="bg-repeat" style={{ backgroundImage: `url(${qiita})`, backgroundSize: '400px 110px' }}>
     <h2 class="text-center text-2xl pt-10 mb-4 font-bold">Qiitaの記事</h2>
-    <table width="600" class="mx-auto font-bold table-bordered border-separate">
+    <table width="600" class="mx-auto font-bold table-bordered">
       <tbody>
         {articles.map(article => (
           <tr>
@@ -45,9 +45,3 @@ for (const item of qRes.data) {
     </table>
   </body>
 </html>
-
-<style>
-  table, th, td {
-    border: 1px solid;
-  }
-</style>

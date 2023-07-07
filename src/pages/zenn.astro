@@ -31,7 +31,7 @@ for (const item of zaRes.data.articles) {
 	</head>
   <body class="bg-repeat" style={{ backgroundImage: `url(${zenn})`, backgroundSize: '400px 110px' }}>
     <h2 class="text-center text-2xl pt-10 mb-4 font-bold">Zennの記事</h2>
-    <table width="600" class="mx-auto font-bold table-bordered border-separate">
+    <table width="600" class="mx-auto font-bold table-bordered">
       <tbody>
         {articles.map(article => (
           <tr>
@@ -43,9 +43,3 @@ for (const item of zaRes.data.articles) {
     </table>
   </body>
 </html>
-
-<style>
-  table, th, td {
-    border: 1px solid;
-  }
-</style>

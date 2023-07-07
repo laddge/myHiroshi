@@ -5,3 +5,12 @@
 a {
   @apply underline text-blue-600 hover:text-blue-800 visited:text-purple-600
 }
+
+.table-bordered {
+  border: 1px solid;
+  border-collapse: separate;
+}
+
+.table-bordered td {
+  border: 1px solid;
+}

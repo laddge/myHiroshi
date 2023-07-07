@@ -5,5 +5,6 @@ module.exports = {
     'postcss-css-variables': {},
     'postcss-combine-duplicated-selectors': { removeDuplicatedProperties: true },
     cssnano: {},
+    'postcss-remove-prefixes': {},
   }
 }

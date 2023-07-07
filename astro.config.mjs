@@ -14,4 +14,13 @@ export default defineConfig({
     }),
     compress(),
   ],
+  vite: {
+    build: {
+      rollupOptions: {
+        output: {
+          assetFileNames: `assets/[name].[ext]`,
+        },
+      },
+    },
+  },
 });

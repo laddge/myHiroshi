@@ -43,6 +43,9 @@ devDependencies:
   postcss-remove-prefixes:
     specifier: ^1.2.0
     version: 1.2.0
+  postcss-remove-selectors:
+    specifier: ^2.0.1
+    version: 2.0.1
   wrangler:
     specifier: ^3.1.2
     version: 3.1.2
@@ -3960,6 +3963,13 @@ packages:
       is-blank: 0.0.1
       is-vendor-prefixed: 0.0.1
       meow: 3.7.0
+      postcss: 5.2.18
+    dev: true
+
+  /postcss-remove-selectors@2.0.1:
+    resolution: {integrity: sha512-E/etfKOZELQjYco/iBEQEiBnIBD6PTDy3T+dxEjEvNc7q23q43GzR6iCjFhBtESklobwgXkvGHkEi4s2v7o2lw==}
+    deprecated: Package is not developed anymore.
+    dependencies:
       postcss: 5.2.18
     dev: true
 

@@ -4,7 +4,8 @@ module.exports = {
     autoprefixer: {},
     'postcss-css-variables': {},
     'postcss-combine-duplicated-selectors': { removeDuplicatedProperties: true },
-    cssnano: {},
     'postcss-remove-prefixes': {},
+    'postcss-remove-selectors': { selectors: ['::-webkit'] },
+    cssnano: {},
   }
 }

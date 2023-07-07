@@ -25,6 +25,7 @@
     "postcss-combine-duplicated-selectors": "^10.0.3",
     "postcss-css-variables": "^0.19.0",
     "postcss-remove-prefixes": "^1.2.0",
+    "postcss-remove-selectors": "^2.0.1",
     "wrangler": "^3.1.2"
   }
 }
